@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Media Pembelajaran Interaktif Berpikir Kritis untuk Informatika Kelas XI SMA.">
+  <title>MPI Berpikir Kritis | Informatika XI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <section class="login-screen" id="loginScreen" aria-labelledby="loginTitle">
+    <div class="login-grid"></div>
+    <div class="login-panel">
+      <div class="login-brand"><span class="brand-mark">∑</span><div><strong>INFORMATIKA XI</strong><small>MEDIA PEMBELAJARAN INTERAKTIF</small></div></div>
+      <div class="login-visual"><div class="login-orbit login-orbit-one"></div><div class="login-orbit login-orbit-two"></div><div class="login-core"><span>◈</span><b>THINK<br>CRITICALLY</b><small>LEARN • ANALYZE • DECIDE</small></div></div>
+      <div class="eyebrow"><span class="pulse"></span> STUDENT ACCESS / 01</div>
+      <h1 id="loginTitle">Selamat datang.<br><span>Mulai berpikir kritis.</span></h1>
+      <p class="login-description">Masukkan nama dan pilih kelas untuk memulai media pembelajaran interaktif Informatika.</p>
+      <form id="loginForm" class="login-form">
+        <label for="studentName">Nama peserta didik</label>
+        <input id="studentName" name="studentName" type="text" maxlength="80" placeholder="Masukkan nama lengkap" autocomplete="name" required>
+        <label for="studentClass">Kelas</label>
+        <select id="studentClass" name="studentClass" required>
+          <option value="" selected disabled>-- Pilih kelas --</option>
+          <option value="XI-8">XI-8</option>
+          <option value="XI-9">XI-9</option>
+          <option value="XII-6">XII-6</option>
+          <option value="XII-7">XII-7</option>
+          <option value="XII-8">XII-8</option>
+        </select>
+        <p class="login-error" id="loginError" aria-live="polite"></p>
+        <button class="btn primary login-submit" type="submit">Masuk ke pembelajaran <span>→</span></button>
+      </form>
+      <p class="login-note"><span>◉</span> Tidak perlu membuat akun atau kata sandi.</p>
+    </div>
+    <div class="login-footer">MPI INFORMATIKA • BERPIKIR KRITIS <span>LEARNING EXPERIENCE / 2026</span></div>
+  </section>
+  <div id="learningApp" hidden>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <a class="brand" href="#beranda" aria-label="Beranda MPI">
+      <span class="brand-mark">∑</span><span><strong>INFORMATIKA XI</strong><small>MEDIA PEMBELAJARAN INTERAKTIF</small></span>
+    </a>
+    <div class="student-session" id="studentSession" hidden><span class="session-dot"></span><span id="studentGreeting">Peserta didik</span><button id="changeStudent" type="button" title="Ganti nama atau kelas">Ganti</button></div>
+    <button class="menu-toggle" id="menuToggle" aria-label="Buka menu">☰</button>
+    <nav id="nav">
+      <a href="#materi">Materi</a><a href="#lab">Laboratorium</a><a href="#kuis">Kuis</a><a href="#refleksi">Refleksi</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="beranda">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="pulse"></span> THINK • ANALYZE • DECIDE</div>
+        <h1>Jangan sekadar<br><span>percaya.</span><br>Pikirkan secara kritis.</h1>
+        <p class="lead">Latih kemampuan mengevaluasi informasi, memeriksa bukti, mengenali bias, dan mengambil keputusan yang masuk akal di dunia digital.</p>
+        <div class="hero-actions"><a class="btn primary" href="#materi">Mulai belajar <span>↘</span></a><a class="text-link" href="#kuis">Uji pemahaman <span>→</span></a></div>
+        <div class="hero-stats"><div><strong>04</strong><small>Modul inti</small></div><div><strong>05</strong><small>Tantangan lab</small></div><div><strong>10</strong><small>Soal kuis</small></div></div>
+      </div>
+      <div class="hero-visual" aria-label="Ilustrasi berpikir kritis">
+        <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div>
+        <div class="core"><span class="core-icon">◈</span><strong>CRITICAL<br>THINKING</strong><small>QUESTION EVERYTHING</small></div>
+        <div class="float-card card-source"><span class="mini-icon">◎</span><div><b>Periksa sumber</b><small>Siapa yang mengatakan?</small></div><span class="check">✓</span></div>
+        <div class="float-card card-evidence"><span class="mini-icon">⌁</span><div><b>Uji bukti</b><small>Data atau opini?</small></div></div>
+        <div class="float-card card-decision"><span class="mini-icon">↗</span><div><b>Ambil keputusan</b><small>Logis dan bertanggung jawab</small></div></div>
+        <div class="spark spark-one">✦</div><div class="spark spark-two">+</div>
+      </div>
+    </section>
+
+    <section class="learning-strip">
+      <div><span class="strip-number">01</span><p><b>Amati</b><small>Pahami masalahnya</small></p></div>
+      <span class="strip-arrow">→</span>
+      <div><span class="strip-number">02</span><p><b>Analisis</b><small>Periksa bukti dan alasan</small></p></div>
+      <span class="strip-arrow">→</span>
+      <div><span class="strip-number">03</span><p><b>Evaluasi</b><small>Bandingkan alternatif</small></p></div>
+      <span class="strip-arrow">→</span>
+      <div><span class="strip-number">04</span><p><b>Simpulkan</b><small>Putuskan dengan sadar</small></p></div>
+    </section>
+
+    <section class="section" id="materi">
+      <div class="section-heading"><div><div class="eyebrow">KNOWLEDGE BASE / 01</div><h2>Bangun pola pikir<br><span>yang lebih tajam.</span></h2></div><p>Berpikir kritis bukan berarti selalu menolak. Artinya, kita menilai klaim secara cermat sebelum menerima atau menyebarkannya.</p></div>
+      <div class="module-grid">
+        <article class="module-card"><div class="module-top"><span class="module-icon purple">⌕</span><span class="module-tag">01 / DASAR</span></div><h3>Apa itu berpikir kritis?</h3><p>Proses berpikir secara logis, reflektif, dan sistematis untuk menilai informasi serta menentukan kesimpulan berdasarkan alasan dan bukti.</p><button class="learn-more" data-modal="definisi">Pelajari konsep <span>↗</span></button></article>
+        <article class="module-card"><div class="module-top"><span class="module-icon cyan">◉</span><span class="module-tag">02 / VERIFIKASI</span></div><h3>Informasi dan sumber</h3><p>Periksa siapa pembuat informasi, kapan diterbitkan, bukti yang digunakan, dan apakah sumber lain mengonfirmasi klaim tersebut.</p><button class="learn-more" data-modal="sumber">Pelajari konsep <span>↗</span></button></article>
+        <article class="module-card"><div class="module-top"><span class="module-icon orange">⌁</span><span class="module-tag">03 / LOGIKA</span></div><h3>Argumen dan bias</h3><p>Bedakan fakta, opini, asumsi, dan kesimpulan. Kenali bias konfirmasi serta generalisasi berlebihan.</p><button class="learn-more" data-modal="bias">Pelajari konsep <span>↗</span></button></article>
+        <article class="module-card"><div class="module-top"><span class="module-icon green">⟁</span><span class="module-tag">04 / KEPUTUSAN</span></div><h3>Pemecahan masalah</h3><p>Rumuskan masalah, kumpulkan data relevan, susun beberapa alternatif, lalu pilih solusi dan evaluasi dampaknya.</p><button class="learn-more" data-modal="solusi">Pelajari konsep <span>↗</span></button></article>
+      </div>
+    </section>
+
+    <section class="case-section" id="lab">
+      <div class="section-heading"><div><div class="eyebrow">INTERACTIVE LAB / 02</div><h2>Masuk ke <span>laboratorium.</span></h2></div><p>Gunakan keterampilan berpikir kritis untuk memecahkan situasi digital berikut. Pilih jawaban, baca umpan balik, lalu lanjutkan.</p></div>
+      <div class="lab-layout">
+        <div class="case-sidebar"><div class="case-label">STUDI KASUS</div><h3 id="caseTitle">Berita viral</h3><p id="caseIntro">Sebuah pesan berantai menyebutkan bahwa sekolah akan diliburkan selama satu minggu.</p><div class="case-progress"><div class="progress-track"><span id="caseProgress"></span></div><small id="caseCount">TANTANGAN 1 DARI 5</small></div><div class="case-dots" id="caseDots"></div></div>
+        <div class="case-main"><div class="case-chip">SKENARIO <span id="caseNumber">01</span></div><h3 id="questionText">Apa langkah pertama yang paling tepat?</h3><div class="answer-list" id="answerList"></div><div class="feedback" id="caseFeedback" aria-live="polite"></div><div class="case-controls"><button class="btn secondary" id="resetCase">Ulangi</button><button class="btn primary" id="nextCase" disabled>Kasus berikutnya →</button></div></div>
+      </div>
+    </section>
+
+    <section class="decision-section">
+      <div class="decision-copy"><div class="eyebrow">QUICK FRAMEWORK / 03</div><h2>Gunakan metode<br><span>5 pertanyaan.</span></h2><p>Sebelum mempercayai atau membagikan informasi, berhenti sejenak dan tanyakan lima hal ini.</p><button class="btn primary" id="showChecklist">Tampilkan checklist <span>↗</span></button></div>
+      <div class="checklist" id="checklist">
+        <div class="check-row"><span>01</span><p><b>Siapa sumbernya?</b><small>Apakah sumber jelas dan dapat dipercaya?</small></p><span class="check-symbol">?</span></div>
+        <div class="check-row"><span>02</span><p><b>Apa buktinya?</b><small>Adakah data, dokumen, atau rujukan yang relevan?</small></p><span class="check-symbol">?</span></div>
+        <div class="check-row"><span>03</span><p><b>Kapan diterbitkan?</b><small>Apakah informasinya masih sesuai konteks waktu?</small></p><span class="check-symbol">?</span></div>
+        <div class="check-row"><span>04</span><p><b>Apa sudut pandangnya?</b><small>Adakah bias, kepentingan, atau informasi yang hilang?</small></p><span class="check-symbol">?</span></div>
+        <div class="check-row"><span>05</span><p><b>Bisakah diverifikasi?</b><small>Apakah sumber independen lain mengonfirmasi?</small></p><span class="check-symbol">?</span></div>
+      </div>
+    </section>
+
+    <section class="quiz-section" id="kuis">
+      <div class="section-heading"><div><div class="eyebrow">KNOWLEDGE CHECK / 04</div><h2>Saatnya <span>uji kemampuan.</span></h2></div><p>Jawab 10 soal pilihan ganda. Hasil dan pembahasan akan muncul setelah semua soal dijawab.</p></div>
+      <div class="quiz-shell">
+        <div class="quiz-head"><div><span class="quiz-label">KUIS INTERAKTIF</span><h3 id="quizTitle">Uji Berpikir Kritis</h3></div><div class="score-pill">SKOR <strong id="liveScore">—</strong></div></div>
+        <div class="quiz-progress"><span id="quizProgress"></span></div>
+        <div id="quizArea"></div>
+        <div class="quiz-footer"><span id="quizCounter">SOAL 1 DARI 10</span><div><button class="btn secondary" id="prevQuestion" disabled>← Sebelumnya</button><button class="btn primary" id="nextQuestion" disabled>Selanjutnya →</button></div></div>
+        <div id="quizResult" class="quiz-result" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="reflection-section" id="refleksi">
+      <div class="reflection-card"><div class="eyebrow">REFLECTION / 05</div><h2>Pikirkan kembali.<br><span>Bagikan pemahamanmu.</span></h2><p>Tuliskan satu kebiasaan berpikir kritis yang akan kamu terapkan saat menggunakan internet atau media sosial.</p><label for="reflectionText">Refleksi pribadi</label><textarea id="reflectionText" rows="4" placeholder="Contoh: Saya akan memeriksa sumber dan membandingkan informasi sebelum membagikannya..."></textarea><div class="reflection-actions"><button class="btn primary" id="saveReflection">Simpan refleksi di perangkat ini</button><button class="btn secondary" id="downloadReflection">Unduh refleksi (.txt)</button></div><p class="privacy-note">Refleksi tersimpan hanya di sesi halaman ini; tidak dikirim ke server.</p><div id="reflectionMessage" class="reflection-message" aria-live="polite"></div></div>
+      <div class="reflection-side"><div class="quote-mark">“</div><blockquote>Orang yang berpikir kritis tidak hanya bertanya, “Apa yang saya ketahui?” tetapi juga, “Bagaimana saya mengetahuinya?”</blockquote><div class="quote-line"></div><small>INGAT: RAGU YANG SEHAT MENDORONG VERIFIKASI</small></div>
+    </section>
+  </main>
+  <footer><div class="footer-brand"><span class="brand-mark">∑</span><div><b>INFORMATIKA XI</b><small>MEDIA PEMBELAJARAN INTERAKTIF</small></div></div><p>Berpikir kritis • Literasi digital • Pengambilan keputusan</p><span class="footer-year">© MPI PEMBELAJARAN</span></footer>
+
+  <div class="modal-backdrop" id="modalBackdrop" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden><div class="modal"><button class="modal-close" id="modalClose" aria-label="Tutup">×</button><div class="eyebrow">MATERI INTI</div><h2 id="modalTitle"></h2><div id="modalBody"></div><button class="btn primary" id="modalDone">Saya mengerti ✓</button></div></div>
+  <script src="script.js"></script>
+  </div><!-- /learningApp -->
+</body>
+</html>
